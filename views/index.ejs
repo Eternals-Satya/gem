@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Img</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>GGA - Gemini Gambar Assistant (Web)</h1>
+  <form action="/generate" method="POST" enctype="multipart/form-data">
+    <textarea name="prompt" placeholder="Masukkan prompt..." rows="4" cols="50"></textarea><br>
+    <input type="file" name="image" accept="image/*"><br>
+    <button type="submit">Kirim</button>
+  </form>
+
+  <% if (error) { %>
+    <p style="color:red;"><%= error %></p>
+  <% } %>
+
+  <% if (imagePath) { %>
+    <h3>Hasil:</h3>
+    <img src="<%= imagePath %>" width="400"/>
+  <% } %>
+
+  <button id="infoBtn">?</button>
+<button id="menuBtn">≡</button>
+
+<div id="popup">
+  <strong>SCG</strong> (SITES CREATE IMAGES) adalah website berbasis AI untuk membuat gambar dari teks.
+  <br><br>
+  Dibuat oleh <b>Cans - Eternals</b>.
+  <br><br>
+  <small>Masukkan prompt teks, lalu tekan submit. Jika ingin mengedit gambar, unggah gambar juga.</small>
+</div>
+
+<div id="menuBox">
+  <strong>Halaman:</strong>
+  <ul>
+    <li><a href="/">/ utama</a></li>
+  </ul>
+  <a href="https://tiktok.com/@anakkecil_s" target="_blank">
+    <button style="background:#111; color:#fff; border-radius:0.5rem; padding:0.5rem 1rem;">Follow</button>
+  </a>
+</div>
+
+<script>
+document.getElementById("infoBtn").onclick = () => {
+  const popup = document.getElementById("popup");
+  popup.style.display = (popup.style.display === "block") ? "none" : "block";
+};
+
+document.getElementById("menuBtn").onclick = () => {
+  const menu = document.getElementById("menuBox");
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+};
+</script>
+</body>
+</html>
