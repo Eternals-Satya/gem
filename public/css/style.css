@@ -1,0 +1,89 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: #2d2d2d;
+}
+
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+textarea, input[type="file"] {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+img {
+  display: block;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  max-width: 90%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+#infoBtn, #menuBtn {
+  position: fixed;
+  top: 1rem;
+  background: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+#infoBtn {
+  right: 1rem;
+  border-radius: 50%;
+}
+
+#menuBtn {
+  left: 1rem;
+  border-radius: 0.5rem;
+  font-size: 20px;
+}
+
+#popup, #menuBox {
+  position: fixed;
+  top: 3rem;
+  right: 1rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: none;
+  max-width: 300px;
+}
+
+#menuBox {
+  left: 1rem;
+  right: auto;
+}
